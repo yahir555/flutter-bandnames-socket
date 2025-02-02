@@ -11,9 +11,9 @@ class Band {
 
   factory Band.fromMap(Map<String, dynamic> obj) {
     return Band(
-      id: obj['id'] ?? '', // Valor por defecto si es null
-      name: obj['name'] ?? 'Unknown', // Valor por defecto si es null
-      votes: obj['votes'] ?? 0, // Valor por defecto si es null
+      id    :obj.containsKey('id') ?   obj['id']: 'no-id', // Valor por defecto si es null
+      name  :obj.containsKey('name')?  obj['name']: 'no-name', // Valor por defecto si es null
+      votes :obj.containsKey('votes')? obj['votes']: 'no-votes'// Valor por defecto si es null
     );
   }
 }
