@@ -23,7 +23,7 @@ class SocketService with ChangeNotifier {
 
   void _initConfig() {
     // Configuración del cliente Socket.IO
-    this._socket = IO.io('http://192.168.0.19:3000/', {
+    this._socket = IO.io('https://flutter-socket-io-server-he8u.onrender.com', {
       'transports': ['websocket'],
       'autoConnect': true,
     });
